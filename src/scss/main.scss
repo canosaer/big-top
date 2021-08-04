@@ -40,7 +40,7 @@ a{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 10% 7.1%;
+	padding: 2.35rem 7.1% 1.25rem;
 
 	&__link{
 		display: flex;
@@ -107,6 +107,38 @@ a{
 		top: 3.05rem;
 		visibility: hidden;
 	}
+}
+
+.hero{
+	@include mixins.default-grid;
+	background: variables.$light-red;
+	color: white;
+	padding: 2.35rem 11.8% 2.35rem 7.1%;
+	position: relative;
+
+	&__heading{
+		font-size: 2rem;
+		line-height: 1.2;
+		margin-bottom: 1.65rem;
+	}
+
+	&__text{
+		line-height: 1.5;
+	}
+
+
+
+	// &:after{
+	// 	content: "";
+	// 	position: absolute;
+	// 	right: 0;
+	// 	top: 0;
+	// 	width: 5rem;
+	// 	height: 5rem;
+	// 	background: url("../../dist/img/hero_decoration.png");
+	// 	@include mixins.default-background;
+	// 	z-index: 2;
+	// }
 }
 
 /* 2. Utility ================================= */

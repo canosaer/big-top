@@ -174,7 +174,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10% 7.1%;
+  padding: 2.35rem 7.1% 1.25rem;
 }
 .top-row__link {
   display: flex;
@@ -225,6 +225,26 @@ a {
           transform: scale(2);
   top: 3.05rem;
   visibility: hidden;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  background: #d30000;
+  color: white;
+  padding: 2.35rem 11.8% 2.35rem 7.1%;
+  position: relative;
+}
+.hero__heading {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1.65rem;
+}
+.hero__text {
+  line-height: 1.5;
 }
 
 /* 2. Utility ================================= */
