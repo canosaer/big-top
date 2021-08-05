@@ -461,7 +461,7 @@ a {
   border-radius: 0.7rem;
   color: white;
   text-align: center;
-  padding: 3rem;
+  padding: 3rem 1.2rem;
 }
 .contact__heading {
   font-size: 2rem;
@@ -470,7 +470,7 @@ a {
 }
 .contact__text {
   line-height: 1.5;
-  padding-bottom: 1rem;
+  padding-bottom: 5.5%;
 }
 .contact__button {
   padding: 1.3rem 1rem;
@@ -481,6 +481,7 @@ a {
   letter-spacing: 0.1rem;
   margin: 0 auto;
   text-align: center;
+  cursor: pointer;
 }
 
 .outro {

@@ -333,7 +333,7 @@ a{
 	border-radius: 0.7rem;
 	color: white;
 	text-align: center;
-	padding: 3rem;
+	padding: 3rem 1.2rem;
 
 	&__heading{
 		font-size: 2rem;
@@ -343,7 +343,7 @@ a{
 
 	&__text{
 		line-height: 1.5;
-		padding-bottom: 1rem;
+		padding-bottom: 5.5%;
 	}
 
 	&__button{
@@ -355,6 +355,7 @@ a{
 		letter-spacing: 0.1rem;
 		margin: 0 auto;
 		text-align: center;
+		cursor: pointer;
 	}
 }
 
