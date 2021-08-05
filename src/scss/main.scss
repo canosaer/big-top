@@ -60,7 +60,7 @@ a{
 		font-size: 1.5rem;
 		letter-spacing: 0.3rem;
 		position: absolute;
-		top: 0.6rem;
+		top: 0.5rem;
 		left: 3rem;
 		width: 15rem; 
 		
@@ -76,7 +76,7 @@ a{
 	position: relative;
 	z-index: 4;
 	justify-content: space-between;
-	align-self: flex-end;
+	margin-top: 0.4rem;
 
 	&__line{
 		width: 100%;
@@ -113,17 +113,85 @@ a{
 	@include mixins.default-grid;
 	background: variables.$light-red;
 	color: white;
-	padding: 2.35rem 11.8% 2.35rem 7.1%;
+	padding: 2.35rem 7.95% 2.35rem 7.1%;
 	position: relative;
+	z-index: 0;
+	overflow-x: hidden;
 
 	&__heading{
 		font-size: 2rem;
 		line-height: 1.2;
 		margin-bottom: 1.65rem;
+		z-index: 2;
 	}
 
 	&__text{
 		line-height: 1.5;
+		margin-bottom: 1.75rem;
+		z-index: 2;
+	}
+
+	&__button{
+		width: 8.55rem;
+		text-transform: uppercase;
+		border: none;
+		border-radius: 0.4rem;
+		padding: 1.25rem 1.25rem;
+		letter-spacing: 0.05rem;
+		justify-self: right;
+		margin-bottom: 16rem;
+		z-index: 2;
+		cursor: pointer;
+	}
+
+	&__circle{
+		width: 15rem;
+		height: 15rem;
+		border-radius: 999rem;
+		background: black;
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0.05;
+
+		&_1{
+			left: 17%;
+			top: 0.2rem;
+		}
+
+		&_2{
+			left: 85%;
+			top: 0.2rem;
+		}
+
+		&_3{
+			left: 17%;
+			top: 16.5rem;
+		}
+
+		&_4{
+			left: 85%;
+			top: 16.5rem;
+		}
+
+		&_5{
+			display: none;
+		}
+	}
+
+
+	&:before{
+		content: "";
+		position: absolute;
+		width: 15rem;
+		height: 20rem;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		background: url("../../dist/img/phone.png");
+		@include mixins.default-background;
+		z-index: 1;
 	}
 
 
@@ -139,6 +207,69 @@ a{
 	// 	@include mixins.default-background;
 	// 	z-index: 2;
 	// }
+}
+
+.projects{
+	@include mixins.default-grid;
+	padding: 2.3rem 0;
+
+	&__card{
+		@include mixins.image-slot;
+		padding-bottom: 82%;
+		border: none;
+		cursor: pointer;
+		margin: 0 auto 1.85rem;
+		border-radius: 0.7rem;
+		width: 90%;
+		max-width: 40rem;
+	}
+
+	&__card-image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+		z-index: 0;
+		border-radius: 0.7rem;
+	}
+
+	&__heading{
+		text-align: center;
+		color: white;
+		font-size: 2.1rem;
+		transform: scale(1, 1.1);
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		line-height: 1.3;
+	}
+
+	&__text{
+		@include mixins.default-grid;
+		position: absolute;
+		color: white;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 80%;
+	}
+
+	&__link{
+		position: relative;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+		color: white;
+		margin-top: 2rem;
+
+		&:after{
+			content: "";
+			position: absolute;
+			width: 0.4rem;
+			height: 0.4rem;
+			border-top: 2px solid red;
+			border-right: 2px solid red;
+			transform: rotate(45deg);
+			margin: 0.25rem 0 0 1.75rem;
+		}
+	}
 }
 
 /* 2. Utility ================================= */
