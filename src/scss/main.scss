@@ -26,6 +26,7 @@ TABLE OF CONTENTS:
 
 body{
 	@include mixins.jost-regular;
+	color: variables.$black;
 }
 
 a{
@@ -269,6 +270,116 @@ a{
 			transform: rotate(45deg);
 			margin: 0.25rem 0 0 1.75rem;
 		}
+	}
+}
+
+.overview{
+	@include mixins.default-grid;
+	padding: 2.3rem 0;
+	color: variables.$dark-gray;
+
+	&__item{
+		@include mixins.default-grid;
+	}
+
+	&__image-slot{
+		margin: 0 auto;
+		width: 70%;
+		@include mixins.image-slot;
+		padding-bottom:59%;
+
+		&_handshake{
+			padding-bottom: 63%;
+		}
+	}
+
+	&__image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+	}
+
+	&__heading{
+		text-transform: uppercase;
+		letter-spacing: 0.25rem;
+		font-size: 1.3rem;
+		text-align: center;
+		margin: 2rem 0 1.6rem;
+	}
+
+	&__text{
+		text-align: center;
+		padding: 0 2.3rem;
+		line-height: 1.5;
+		margin-bottom: 3rem;
+	}
+}
+
+.footer{
+	
+}
+
+.outro{
+	background: variables.$black;
+	@include mixins.default-grid;
+
+	&__link{
+		margin: 5rem 0 3.5rem;
+		display: flex;
+		position: relative;
+		justify-self: center;
+		width: 12rem;
+
+		&:after{
+			content: "";
+			position: absolute;
+			width: 150%;
+			height: 1px;
+			background: variables.$dark-gray;
+			bottom: -2rem;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 2;
+			opacity: 0.5;
+		}
+	}
+
+	&__heading{
+		@include mixins.jost-medium;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		letter-spacing: 0.3rem;
+		position: absolute;
+		top: 1.4rem;
+		left: 4.2rem;
+		width: 7.85rem;
+		color: variables.$light-gray;
+	}
+
+	&__logo{
+		@include mixins.default-img;
+		width: 23%;
+	}
+
+	
+}
+
+.footer-nav{
+	margin: 0 auto;
+
+	&__list{
+		@include mixins.default-grid;
+	}
+
+	&__item{
+		margin-bottom: 2rem;
+	}
+
+	&__link{
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 0.9rem;
+		letter-spacing: 0.15rem;
 	}
 }
 

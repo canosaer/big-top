@@ -156,6 +156,7 @@ TABLE OF CONTENTS:
 body {
   font-family: "Jost", sans-serif;
   font-weight: 400;
+  color: #1d1c1e;
 }
 
 a {
@@ -384,6 +385,127 @@ a {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin: 0.25rem 0 0 1.75rem;
+}
+
+.overview {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  padding: 2.3rem 0;
+  color: #504b4b;
+}
+.overview__item {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+.overview__image-slot {
+  margin: 0 auto;
+  width: 70%;
+  height: 0;
+  position: relative;
+  padding-bottom: 59%;
+}
+.overview__image-slot_handshake {
+  padding-bottom: 63%;
+}
+.overview__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.overview__heading {
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 2rem 0 1.6rem;
+}
+.overview__text {
+  text-align: center;
+  padding: 0 2.3rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.outro {
+  background: #1d1c1e;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+.outro__link {
+  margin: 5rem 0 3.5rem;
+  display: flex;
+  position: relative;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 12rem;
+}
+.outro__link:after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 1px;
+  background: #504b4b;
+  bottom: -2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0.5;
+}
+.outro__heading {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  position: absolute;
+  top: 1.4rem;
+  left: 4.2rem;
+  width: 7.85rem;
+  color: #f1f3f5;
+}
+.outro__logo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 23%;
+}
+
+.footer-nav {
+  margin: 0 auto;
+}
+.footer-nav__list {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+.footer-nav__item {
+  margin-bottom: 2rem;
+}
+.footer-nav__link {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
 }
 
 /* 2. Utility ================================= */
