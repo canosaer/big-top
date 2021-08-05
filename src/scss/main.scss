@@ -275,7 +275,7 @@ a{
 
 .overview{
 	@include mixins.default-grid;
-	padding: 2.3rem 0;
+	padding: 2.3rem 0 20rem;
 	color: variables.$dark-gray;
 
 	&__item{
@@ -315,7 +315,43 @@ a{
 }
 
 .footer{
-	
+	position: relative;
+}
+
+.contact{
+	position: absolute;
+	width: 90%;
+	background: variables.$light-red;
+	@include mixins.default-grid;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	border-radius: 0.7rem;
+	color: white;
+	text-align: center;
+	padding: 3rem;
+
+	&__heading{
+		font-size: 2rem;
+		line-height: 1.15;
+		margin-bottom: 1.5rem;
+	}
+
+	&__text{
+		line-height: 1.5;
+		padding-bottom: 1rem;
+	}
+
+	&__button{
+		padding: 1.3rem 1rem;
+		border-radius: 0.7rem;
+		border: none;
+		width: 9.15rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		margin: 0 auto;
+		text-align: center;
+	}
 }
 
 .outro{
@@ -323,7 +359,7 @@ a{
 	@include mixins.default-grid;
 
 	&__link{
-		margin: 5rem 0 3.5rem;
+		margin: 15rem 0 3.5rem;
 		display: flex;
 		position: relative;
 		justify-self: center;
