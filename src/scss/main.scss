@@ -360,6 +360,28 @@ a{
 		width: 23%;
 	}
 
+	&__contact-card{
+		@include mixins.default-grid;
+		text-align: center;
+
+		&_2{
+			margin-top: 1.5rem;
+		}
+	}
+
+	&__sub-heading{
+		@include mixins.jost-medium;
+		color: variables.$light-gray;
+		opacity: 0.75;
+		margin: 1rem 0 0.75rem;
+	}
+
+	&__text{
+		color: variables.$light-gray;
+		opacity: 0.5;
+		margin-bottom: 0.75rem;
+	}
+
 	
 }
 
@@ -381,6 +403,23 @@ a{
 		font-size: 0.9rem;
 		letter-spacing: 0.15rem;
 	}
+}
+
+.social-media{
+	display: flex;
+	justify-content: center;
+	margin: 2rem 0 3.5rem;
+
+	&__icon{
+		color: variables.$light-gray;
+		opacity: 0.6;
+		font-size: 1.6rem;
+		margin-right: 1rem;
+	}
+}
+
+.fa-instagram{
+	margin: 0;
 }
 
 /* 2. Utility ================================= */

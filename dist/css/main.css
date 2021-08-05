@@ -486,6 +486,29 @@ a {
      object-position: center;
   width: 23%;
 }
+.outro__contact-card {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.outro__contact-card_2 {
+  margin-top: 1.5rem;
+}
+.outro__sub-heading {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  color: #f1f3f5;
+  opacity: 0.75;
+  margin: 1rem 0 0.75rem;
+}
+.outro__text {
+  color: #f1f3f5;
+  opacity: 0.5;
+  margin-bottom: 0.75rem;
+}
 
 .footer-nav {
   margin: 0 auto;
@@ -506,6 +529,22 @@ a {
   text-align: center;
   font-size: 0.9rem;
   letter-spacing: 0.15rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 3.5rem;
+}
+.social-media__icon {
+  color: #f1f3f5;
+  opacity: 0.6;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+.fa-instagram {
+  margin: 0;
 }
 
 /* 2. Utility ================================= */
