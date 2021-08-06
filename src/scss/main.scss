@@ -114,6 +114,27 @@ a{
 	}
 }
 
+.menu{
+	display: none;
+
+	@include mixins.landscape{
+		@include mixins.default-grid;
+	}
+
+	&__list{
+		display: flex;
+		justify-content: space-between;
+		width: 22rem;
+		align-items: flex-end;
+	}
+
+	&__link{
+		color: variables.$black;
+		text-transform: uppercase;
+		letter-spacing: 0.15rem;
+	}
+}
+
 .hero{
 	@include mixins.default-grid;
 	background: variables.$light-red;
@@ -121,19 +142,49 @@ a{
 	padding: 2.35rem 7.95% 2.35rem 7.1%;
 	position: relative;
 	z-index: 0;
-	overflow-x: hidden;
+	overflow: hidden;
+
+	@include mixins.landscape{
+		margin: 2rem 7.1%;
+		border-radius: 0.7rem;
+		padding-right: 28%;
+		height: 34rem;
+	}
+
+	@include mixins.wide-screen{
+		margin: 2rem 7.1%;
+		padding: 2.35rem 41% 2.35rem 10%;
+	}
 
 	&__heading{
 		font-size: 2rem;
 		line-height: 1.2;
 		margin-bottom: 1.65rem;
 		z-index: 2;
+
+		@include mixins.landscape{
+			margin-top: auto;
+			font-size: 2.5rem;
+		}
+
+		@include mixins.wide-screen{
+			font-size: 2.8rem;
+		}
 	}
 
 	&__text{
 		line-height: 1.5;
 		margin-bottom: 1.75rem;
 		z-index: 2;
+
+		@include mixins.landscape{
+			margin-bottom: -1.75rem;
+		}
+
+		@include mixins.wide-screen{
+			font-size: 1.15rem;
+			margin-bottom: 1.75rem;
+		}
 	}
 
 	&__button{
@@ -147,6 +198,11 @@ a{
 		margin-bottom: 16rem;
 		z-index: 2;
 		cursor: pointer;
+
+		@include mixins.landscape{
+			justify-self: left;
+			margin-bottom: auto;
+		}
 	}
 
 	&__circle{
@@ -197,6 +253,22 @@ a{
 		background: url("../../dist/img/phone.png");
 		@include mixins.default-background;
 		z-index: 1;
+
+		@include mixins.landscape{
+			background: url("../../dist/img/big-phone.png");
+			@include mixins.default-background;
+			left: 83%;
+			top: 5.75rem;
+			width: 13rem;
+			height: 21rem;
+		}
+
+		@include mixins.wide-screen{
+			left: 75%;
+			top: 2.75rem;
+			width: 25rem;
+			height: 40rem;
+		}
 	}
 
 
