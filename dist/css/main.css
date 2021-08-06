@@ -230,7 +230,7 @@ a {
   -webkit-transform: scale(2);
           transform: scale(2);
   top: 3.05rem;
-  visibility: hidden;
+  opacity: 0;
 }
 
 .hero {
@@ -378,7 +378,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   color: white;
-  margin-top: 2rem;
+  margin: 2rem auto 0;
 }
 .projects__link:after {
   content: "";
