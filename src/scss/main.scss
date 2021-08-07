@@ -216,28 +216,62 @@ a{
 		transform: translateX(-50%);
 		opacity: 0.05;
 
+		@include mixins.wide-screen{
+			width: 17rem;
+			height: 17rem;
+		}
+
 		&_1{
 			left: 17%;
 			top: 0.2rem;
+
+			@include mixins.wide-screen{
+				left: unset;
+				right: -8.3rem;
+			}
 		}
 
 		&_2{
 			left: 85%;
 			top: 0.2rem;
+
+			@include mixins.wide-screen{
+				left: unset;
+				right: 8.3rem;
+			}
 		}
 
 		&_3{
 			left: 17%;
 			top: 16.5rem;
+
+			@include mixins.wide-screen{
+				left: unset;
+				right: 25.25rem;
+				top: 0.2rem;
+			}
 		}
 
 		&_4{
 			left: 85%;
 			top: 16.5rem;
+
+			@include mixins.wide-screen{
+				left: unset;
+				right: -8.3rem;
+				top: 18rem;
+			}
 		}
 
 		&_5{
 			display: none;
+
+			@include mixins.wide-screen{
+				display: block;
+				left: unset;
+				right: 7.5rem;
+				top: 18rem;
+			}
 		}
 	}
 
@@ -289,6 +323,13 @@ a{
 .projects{
 	@include mixins.default-grid;
 	padding: 2.3rem 0;
+	gap: 1rem;
+	
+
+	@include mixins.landscape{
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		padding: 2.3rem 7.1%;
+	}
 
 	&__card{
 		@include mixins.image-slot;
@@ -299,6 +340,19 @@ a{
 		border-radius: 0.7rem;
 		width: 90%;
 		max-width: 40rem;
+
+		@include mixins.landscape{
+			width: 100%;
+			margin: unset;
+			padding-bottom: 50%;
+		}
+
+		&_web{
+			@include mixins.landscape{
+				grid-row: 1/3;
+				height: 100%;
+			}
+		}
 	}
 
 	&__card-image{
@@ -316,6 +370,10 @@ a{
 		text-transform: uppercase;
 		letter-spacing: 0.1rem;
 		line-height: 1.3;
+
+		@include mixins.landscape{
+			font-size: 1.75rem;
+		}
 	}
 
 	&__text{
@@ -335,6 +393,13 @@ a{
 		letter-spacing: 0.3rem;
 		color: white;
 		margin: 2rem auto 0;
+		left: -3.5%;
+
+		@include mixins.landscape{
+			font-size: 0.9rem;
+			margin-top: 1.25rem;
+			left: -2.5%;
+		}
 
 		&:after{
 			content: "";
@@ -345,6 +410,10 @@ a{
 			border-right: 2px solid red;
 			transform: rotate(45deg);
 			margin: 0.25rem 0 0 1.75rem;
+
+			@include mixins.landscape{
+				margin: 0.25rem 0 0 1rem;
+			}
 		}
 	}
 }

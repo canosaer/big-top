@@ -349,24 +349,64 @@ a {
           transform: translateX(-50%);
   opacity: 0.05;
 }
+@media (min-width: 1200px) {
+  .hero__circle {
+    width: 17rem;
+    height: 17rem;
+  }
+}
 .hero__circle_1 {
   left: 17%;
   top: 0.2rem;
+}
+@media (min-width: 1200px) {
+  .hero__circle_1 {
+    left: unset;
+    right: -8.3rem;
+  }
 }
 .hero__circle_2 {
   left: 85%;
   top: 0.2rem;
 }
+@media (min-width: 1200px) {
+  .hero__circle_2 {
+    left: unset;
+    right: 8.3rem;
+  }
+}
 .hero__circle_3 {
   left: 17%;
   top: 16.5rem;
+}
+@media (min-width: 1200px) {
+  .hero__circle_3 {
+    left: unset;
+    right: 25.25rem;
+    top: 0.2rem;
+  }
 }
 .hero__circle_4 {
   left: 85%;
   top: 16.5rem;
 }
+@media (min-width: 1200px) {
+  .hero__circle_4 {
+    left: unset;
+    right: -8.3rem;
+    top: 18rem;
+  }
+}
 .hero__circle_5 {
   display: none;
+}
+@media (min-width: 1200px) {
+  .hero__circle_5 {
+    display: block;
+    left: unset;
+    right: 7.5rem;
+    top: 18rem;
+  }
 }
 .hero:before {
   content: "";
@@ -409,6 +449,14 @@ a {
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   padding: 2.3rem 0;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .projects {
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 2.3rem 7.1%;
+  }
 }
 .projects__card {
   height: 0;
@@ -420,6 +468,21 @@ a {
   border-radius: 0.7rem;
   width: 90%;
   max-width: 40rem;
+}
+@media (min-width: 768px) {
+  .projects__card {
+    width: 100%;
+    margin: unset;
+    padding-bottom: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .projects__card_web {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    height: 100%;
+  }
 }
 .projects__card-image {
   position: absolute;
@@ -444,6 +507,11 @@ a {
   letter-spacing: 0.1rem;
   line-height: 1.3;
 }
+@media (min-width: 768px) {
+  .projects__heading {
+    font-size: 1.75rem;
+  }
+}
 .projects__text {
   display: -ms-grid;
   display: grid;
@@ -465,6 +533,14 @@ a {
   letter-spacing: 0.3rem;
   color: white;
   margin: 2rem auto 0;
+  left: -3.5%;
+}
+@media (min-width: 768px) {
+  .projects__link {
+    font-size: 0.9rem;
+    margin-top: 1.25rem;
+    left: -2.5%;
+  }
 }
 .projects__link:after {
   content: "";
@@ -476,6 +552,11 @@ a {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin: 0.25rem 0 0 1.75rem;
+}
+@media (min-width: 768px) {
+  .projects__link:after {
+    margin: 0.25rem 0 0 1rem;
+  }
 }
 
 .overview {
