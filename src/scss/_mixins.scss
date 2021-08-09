@@ -1,5 +1,11 @@
 @use 'variables';
 
+@mixin small-tablet{
+  @media (min-width: 600px){
+    @content;
+  }
+}
+
 @mixin landscape {
     @media (min-width: 768px){
       @content;

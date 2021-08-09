@@ -341,10 +341,16 @@ a{
 		width: 90%;
 		max-width: 40rem;
 
+		@include mixins.small-tablet{
+			padding-bottom: 50%;
+		}
+
+
 		@include mixins.landscape{
 			width: 100%;
 			margin: unset;
 			padding-bottom: 50%;
+			max-width: unset;
 		}
 
 		&_web{

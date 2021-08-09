@@ -469,11 +469,17 @@ a {
   width: 90%;
   max-width: 40rem;
 }
+@media (min-width: 600px) {
+  .projects__card {
+    padding-bottom: 50%;
+  }
+}
 @media (min-width: 768px) {
   .projects__card {
     width: 100%;
     margin: unset;
     padding-bottom: 50%;
+    max-width: unset;
   }
 }
 @media (min-width: 768px) {
