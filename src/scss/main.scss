@@ -429,8 +429,22 @@ a{
 	padding: 2.3rem 0 20rem;
 	color: variables.$dark-gray;
 
+	@include mixins.landscape{
+		margin: 0 7.1%;
+		padding: 5rem 0 13rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
 	&__item{
 		@include mixins.default-grid;
+
+		@include mixins.landscape{
+			grid-template-rows: 11rem;
+		}
+
+		@include mixins.medium-screen{
+			grid-template-rows: unset;
+		}
 	}
 
 	&__image-slot{
@@ -446,6 +460,14 @@ a{
 		&_reinvention{
 			padding-bottom: 58%;
 		}
+
+		@include mixins.landscape{
+			place-self: center center;
+		}
+
+		@include mixins.medium-screen{
+			place-self: unset;
+		}
 	}
 
 	&__image{
@@ -459,6 +481,14 @@ a{
 		font-size: 1.3rem;
 		text-align: center;
 		margin: 2rem 0 1.6rem;
+
+		@include mixins.landscape{
+			letter-spacing: 0rem;
+		}
+
+		@include mixins.medium-screen{
+			letter-spacing: 0.25rem;
+		}
 	}
 
 	&__text{
@@ -466,6 +496,14 @@ a{
 		padding: 0 2.3rem;
 		line-height: 1.5;
 		margin-bottom: 3rem;
+
+		@include mixins.landscape{
+			padding: 0 1.25rem;
+		}
+
+		@include mixins.medium-screen{
+			padding: 0 2.3rem;
+		}
 	}
 }
 
@@ -486,15 +524,33 @@ a{
 	text-align: center;
 	padding: 3rem 1.2rem;
 
+	@include mixins.landscape{
+		width: 76%;
+		text-align: unset;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 0.05fr) minmax(0, 1fr);
+		padding: 3rem;
+	}
+
 	&__heading{
 		font-size: 2rem;
 		line-height: 1.15;
 		margin-bottom: 1.5rem;
+
+		@include mixins.landscape{
+			width: 100%;
+			grid-row: 1/2;
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__text{
 		line-height: 1.5;
 		padding-bottom: 5.5%;
+		
+		@include mixins.landscape{
+			width: 100%;
+			grid-row: 2/3;
+		}
 	}
 
 	&__button{
@@ -507,6 +563,16 @@ a{
 		margin: 0 auto;
 		text-align: center;
 		cursor: pointer;
+
+		@include mixins.landscape{
+			grid-row: 1/3;
+			grid-column: 3/4;
+			height: 3rem;
+			padding: unset;
+			margin: unset;
+			place-self: center center;
+			margin-left:15%;
+		}
 	}
 }
 

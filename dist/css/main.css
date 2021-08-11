@@ -574,12 +574,32 @@ a {
   padding: 2.3rem 0 20rem;
   color: #504b4b;
 }
+@media (min-width: 768px) {
+  .overview {
+    margin: 0 7.1%;
+    padding: 5rem 0 13rem;
+    -ms-grid-columns: (minmax(0, 1fr))[3];
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 .overview__item {
   display: -ms-grid;
   display: grid;
   grid-auto-rows: auto;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .overview__item {
+    -ms-grid-rows: 11rem;
+    grid-template-rows: 11rem;
+  }
+}
+@media (min-width: 1024px) {
+  .overview__item {
+    -ms-grid-rows: unset;
+    grid-template-rows: unset;
+  }
 }
 .overview__image-slot {
   margin: 0 auto;
@@ -593,6 +613,20 @@ a {
 }
 .overview__image-slot_reinvention {
   padding-bottom: 58%;
+}
+@media (min-width: 768px) {
+  .overview__image-slot {
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    place-self: center center;
+  }
+}
+@media (min-width: 1024px) {
+  .overview__image-slot {
+    -ms-grid-row-align: unset;
+    -ms-grid-column-align: unset;
+    place-self: unset;
+  }
 }
 .overview__image {
   position: absolute;
@@ -612,11 +646,31 @@ a {
   text-align: center;
   margin: 2rem 0 1.6rem;
 }
+@media (min-width: 768px) {
+  .overview__heading {
+    letter-spacing: 0rem;
+  }
+}
+@media (min-width: 1024px) {
+  .overview__heading {
+    letter-spacing: 0.25rem;
+  }
+}
 .overview__text {
   text-align: center;
   padding: 0 2.3rem;
   line-height: 1.5;
   margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .overview__text {
+    padding: 0 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .overview__text {
+    padding: 0 2.3rem;
+  }
 }
 
 .footer {
@@ -641,14 +695,40 @@ a {
   text-align: center;
   padding: 3rem 1.2rem;
 }
+@media (min-width: 768px) {
+  .contact {
+    width: 76%;
+    text-align: unset;
+    -ms-grid-columns: minmax(0, 1fr) minmax(0, 0.05fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.05fr) minmax(0, 1fr);
+    padding: 3rem;
+  }
+}
 .contact__heading {
   font-size: 2rem;
   line-height: 1.15;
   margin-bottom: 1.5rem;
 }
+@media (min-width: 768px) {
+  .contact__heading {
+    width: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    margin-bottom: 1rem;
+  }
+}
 .contact__text {
   line-height: 1.5;
   padding-bottom: 5.5%;
+}
+@media (min-width: 768px) {
+  .contact__text {
+    width: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
 }
 .contact__button {
   padding: 1.3rem 1rem;
@@ -660,6 +740,23 @@ a {
   margin: 0 auto;
   text-align: center;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .contact__button {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    height: 3rem;
+    padding: unset;
+    margin: unset;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    place-self: center center;
+    margin-left: 15%;
+  }
 }
 
 .outro {
