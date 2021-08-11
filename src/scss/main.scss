@@ -443,7 +443,7 @@ a{
 		}
 
 		@include mixins.medium-screen{
-			grid-template-rows: unset;
+			grid-template-rows: 19vw;
 		}
 	}
 
@@ -579,6 +579,10 @@ a{
 .outro{
 	background: variables.$black;
 	@include mixins.default-grid;
+
+	@include mixins.landscape{
+		grid-template-columns: minmax(0, 0.25fr) minmax(0, 0.25fr) minmax(0, 1fr);
+	}
 
 	&__link{
 		margin: 15rem 0 3.5rem;
