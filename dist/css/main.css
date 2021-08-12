@@ -142,13 +142,14 @@ AUTHOR:		Eric Canosa
 TABLE OF CONTENTS:
 
 0. Initialization
-1. Appearance
-2. Utility
+1. Home Page
+2. About Page
+3. Utility
 
 ==============================================
 */
 /* 0. Initialization ========================= */
-/* 1. Styles ================================= */
+/* 1. Home Page ================================= */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -980,7 +981,173 @@ a {
   margin: 0;
 }
 
-/* 2. Utility ================================= */
+/* 2. About Page ============================== */
+.about-page .hero {
+  padding: 2.35rem 7.1%;
+}
+.about-page .hero__image-slot {
+  height: 0;
+  position: relative;
+  padding-bottom: 76%;
+}
+.about-page .hero__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.7rem;
+}
+.about-page .hero:before {
+  display: none;
+}
+
+.code {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  background: rgba(255, 173, 155, 0.25);
+  padding: 2.35rem 7.1%;
+}
+.code__heading {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1.65rem;
+  z-index: 2;
+  color: #d30000;
+}
+.code__image-slot {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  height: 0;
+  position: relative;
+  padding-bottom: 76%;
+}
+.code__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.7rem;
+}
+.code__text {
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+  z-index: 2;
+}
+
+.locations {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  padding: 2.35rem 7.1%;
+  width: 100%;
+  justify-content: space-between;
+}
+.locations__item {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
+  place-self: center center;
+  width: 50%;
+}
+.locations__image-slot {
+  height: 0;
+  position: relative;
+  padding-bottom: 100%;
+}
+.locations__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.locations__heading {
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 2rem 0 1.6rem;
+}
+.locations__link {
+  background: #ffad9b;
+  text-align: center;
+  color: White;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  width: 8rem;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
+  place-self: center center;
+  margin-bottom: 3rem;
+}
+
+.real-deal {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  background: rgba(255, 173, 155, 0.25);
+  padding: 2.35rem 7.1% 20rem;
+}
+.real-deal__heading {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1.65rem;
+  z-index: 2;
+  color: #d30000;
+}
+.real-deal__image-slot {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  height: 0;
+  position: relative;
+  padding-bottom: 76%;
+}
+.real-deal__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.7rem;
+}
+.real-deal__text {
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+  z-index: 2;
+}
+
+/* 3. Utility ================================= */
 .hidden {
   display: none;
 }

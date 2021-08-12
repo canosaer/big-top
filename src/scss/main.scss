@@ -7,8 +7,9 @@ AUTHOR:		Eric Canosa
 TABLE OF CONTENTS:
 
 0. Initialization
-1. Appearance
-2. Utility
+1. Home Page
+2. About Page
+3. Utility
 
 ==============================================
 */
@@ -18,7 +19,7 @@ TABLE OF CONTENTS:
 @use 'variables';
 @use 'mixins';
 
-/* 1. Styles ================================= */
+/* 1. Home Page ================================= */
 
 *, *::before, *::after {
 	box-sizing: border-box;
@@ -157,10 +158,7 @@ a{
 	}
 
 	&__heading{
-		font-size: 2rem;
-		line-height: 1.2;
-		margin-bottom: 1.65rem;
-		z-index: 2;
+		@include mixins.heading-format;
 
 		@include mixins.landscape{
 			margin-top: auto;
@@ -173,9 +171,7 @@ a{
 	}
 
 	&__text{
-		line-height: 1.5;
-		margin-bottom: 1.75rem;
-		z-index: 2;
+		@include mixins.text-format;
 
 		@include mixins.landscape{
 			margin-bottom: -1.75rem;
@@ -480,11 +476,7 @@ a{
 	}
 
 	&__heading{
-		text-transform: uppercase;
-		letter-spacing: 0.25rem;
-		font-size: 1.3rem;
-		text-align: center;
-		margin: 2rem 0 1.6rem;
+		@include mixins.subheading-format;
 
 		@include mixins.landscape{
 			letter-spacing: 0rem;
@@ -754,7 +746,121 @@ a{
 	margin: 0;
 }
 
-/* 2. Utility ================================= */
+/* 2. About Page ============================== */
+
+.about-page .hero{
+
+	padding: 2.35rem 7.1%;
+
+	&__image-slot{
+		@include mixins.image-slot;
+		padding-bottom: 76%;
+	}
+
+	&__image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+		border-radius: 0.7rem;
+	}
+
+	&:before{
+		display: none;
+	}
+}
+
+.code{
+	@include mixins.default-grid;
+	background: rgba(255, 173, 155, 0.25);
+	padding: 2.35rem 7.1%;
+
+	&__heading{
+		@include mixins.heading-format;
+		color: variables.$light-red;
+	}
+
+	&__image-slot{
+		grid-row: 4/5;
+		@include mixins.image-slot;
+		padding-bottom: 76%;
+	}
+
+	&__image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+		border-radius: 0.7rem;
+	}
+
+	&__text{
+		@include mixins.text-format;
+	}
+}
+
+.locations{
+	@include mixins.default-grid;
+	padding: 2.35rem 7.1%;
+	width: 100%;
+	justify-content: space-between;
+
+	&__item{
+		@include mixins.default-grid;
+		place-self: center center;
+		width: 50%;
+	}
+	
+	&__image-slot{
+		@include mixins.image-slot;
+		padding-bottom: 100%;
+	}
+
+	&__image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+	}
+
+	&__heading{
+		@include mixins.subheading-format;
+	}
+
+	&__link{
+		background: rgba(255, 173, 155);
+		text-align: center;
+		color: White;
+		padding: 1rem;
+		border-radius: 0.7rem;
+		width: 8rem;
+		place-self: center center;
+		margin-bottom: 3rem;
+	}
+}
+
+.real-deal{
+	@include mixins.default-grid;
+	background: rgba(255, 173, 155, 0.25);
+	padding: 2.35rem 7.1% 20rem;
+
+	&__heading{
+		@include mixins.heading-format;
+		color: variables.$light-red;
+	}
+
+	&__image-slot{
+		grid-row: 4/5;
+		@include mixins.image-slot;
+		padding-bottom: 76%;
+	}
+
+	&__image{
+		@include mixins.cover-parent;
+		@include mixins.default-img;
+		border-radius: 0.7rem;
+	}
+
+	&__text{
+		@include mixins.text-format;
+	}
+}
+
+/* 3. Utility ================================= */
 
 .hidden{
 	display: none;

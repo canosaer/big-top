@@ -62,3 +62,24 @@
   height: 0;
   position: relative;
 }
+
+@mixin heading-format{
+  font-size: 2rem;
+	line-height: 1.2;
+	margin-bottom: 1.65rem;
+	z-index: 2;
+}
+
+@mixin text-format{
+  line-height: 1.5;
+	margin-bottom: 1.75rem;
+	z-index: 2;
+}
+
+@mixin subheading-format{
+  text-transform: uppercase;
+	letter-spacing: 0.25rem;
+	font-size: 1.3rem;
+	text-align: center;
+	margin: 2rem 0 1.6rem;
+}
