@@ -353,6 +353,10 @@ a{
 			max-width: unset;
 		}
 
+		@include mixins.wide-screen{
+			padding-bottom: 39.5%;
+		}
+
 		&_web{
 			@include mixins.landscape{
 				grid-row: 1/3;
@@ -528,7 +532,7 @@ a{
 		width: 76%;
 		text-align: unset;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 0.05fr) minmax(0, 1fr);
-		padding: 3rem;
+		padding: 4rem 3rem;
 	}
 
 	&__heading{
@@ -537,7 +541,8 @@ a{
 		margin-bottom: 1.5rem;
 
 		@include mixins.landscape{
-			width: 100%;
+			font-size: 2rem;
+			width: 100;
 			grid-row: 1/2;
 			margin-bottom: 1rem;
 		}
@@ -550,6 +555,10 @@ a{
 		@include mixins.landscape{
 			width: 100%;
 			grid-row: 2/3;
+		}
+
+		@include mixins.landscape{
+			padding-bottom: unset;
 		}
 	}
 
@@ -580,8 +589,9 @@ a{
 	background: variables.$black;
 	@include mixins.default-grid;
 
-	@include mixins.landscape{
-		grid-template-columns: minmax(0, 0.25fr) minmax(0, 0.25fr) minmax(0, 1fr);
+	@include mixins.medium-screen{
+		grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.75fr) minmax(0, 0.75fr) minmax(0, 1fr) minmax(0, 0.4fr);
+		padding-bottom: 5rem;
 	}
 
 	&__link{
@@ -590,6 +600,11 @@ a{
 		position: relative;
 		justify-self: center;
 		width: 12rem;
+
+		@include mixins.medium-screen{
+			grid-column: 2/3;
+			justify-self: left;
+		}
 
 		&:after{
 			content: "";
@@ -602,6 +617,12 @@ a{
 			transform: translateX(-50%);
 			z-index: 2;
 			opacity: 0.5;
+
+			@include mixins.medium-screen{
+				left: 0;
+				transform: unset;
+				width: 75vw;
+			}
 		}
 	}
 
@@ -626,8 +647,20 @@ a{
 		@include mixins.default-grid;
 		text-align: center;
 
+		@include mixins.medium-screen{
+			grid-column: 2/3;
+			grid-row: 2/3;
+			text-align: left;
+		}
+
 		&_2{
 			margin-top: 1.5rem;
+
+			@include mixins.medium-screen{
+				grid-column: 3/4;
+				grid-row: 2/3;
+				margin-top: unset;
+			}
 		}
 	}
 
@@ -650,12 +683,36 @@ a{
 .footer-nav{
 	margin: 0 auto;
 
+	@include mixins.medium-screen{
+		grid-column: 4/5;
+		grid-row: 1/2;
+		width: 100%;
+	}
+
 	&__list{
 		@include mixins.default-grid;
+
+		@include mixins.medium-screen{
+			display: flex;
+			grid-template-rows: unset;
+			width: 100%;
+			max-width: 30rem;
+			justify-content: space-between;
+			height: 2rem;
+			margin-left: auto;
+		}
 	}
 
 	&__item{
 		margin-bottom: 2rem;
+
+		@include mixins.medium-screen{
+			z-index: 0;
+			@include mixins.default-grid;
+			height: 100%;
+			margin: unset;
+		}
+
 	}
 
 	&__link{
@@ -664,6 +721,10 @@ a{
 		text-align: center;
 		font-size: 0.9rem;
 		letter-spacing: 0.15rem;
+
+		@include mixins.medium-screen{
+			margin-top: 16.5rem;
+		}
 	}
 }
 
@@ -671,6 +732,15 @@ a{
 	display: flex;
 	justify-content: center;
 	margin: 2rem 0 3.5rem;
+
+	@include mixins.medium-screen{
+		grid-row: 2/3;
+		grid-column: 4/5;
+		justify-self: right;
+		width: 15rem;
+		justify-content: space-between;
+		margin: 3.75rem 0 0;
+	}
 
 	&__icon{
 		color: variables.$light-gray;
