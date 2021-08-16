@@ -754,37 +754,44 @@ a{
 
 	@include mixins.landscape{
 		margin: unset;
+		margin: 0 7.1% 2rem;
 		border-radius: unset;
-		padding-right: 7.1%;
 		height: unset;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 0.75fr);
+		padding: 0;
+		grid-template-rows: 22% 0.2rem;
+		border-radius: 0.7rem;
 	}
 
 	@include mixins.medium-screen{
-		grid-template-columns: minmax(0, 1fr) minmax(0, 0.75fr);
-		padding: 0;
+		grid-template-rows: 23.75% 0.5rem;
 	}
 
 	&__heading{
 		@include mixins.landscape{
-			margin-top: unset;
+			margin: unset;
+			margin-left: 15%;
+			align-self: flex-end;
+			font-size: 2rem;
 		}
 
 		@include mixins.medium-screen{
-			margin: 10% 0 1.65rem 15%;
+			font-size: 2.5rem;
 		}
 	}
 
 	&__text{
 		@include mixins.landscape{
-			margin-bottom: 1.75rem;
-		}
-
-		@include mixins.medium-screen{
+			margin: 0 3rem 0 15%;
 			grid-column: 1/2;
+			place-self: top center;
+			grid-row: 3/4;
+			line-height: 1.1;
 		}
 
 		@include mixins.medium-screen{
-			margin: 0 4rem 10% 15%;
+			margin: 0 4rem 0 15%;
+			line-height: 1.5rem;
 		}
 	}
 
@@ -792,8 +799,8 @@ a{
 		@include mixins.image-slot;
 		padding-bottom: 76%;
 
-		@include mixins.medium-screen{
-			grid-row: 1/3;
+		@include mixins.landscape{
+			grid-row: 1/4;
 			grid-column: 2/3;
 		}
 	}
@@ -803,7 +810,7 @@ a{
 		@include mixins.default-img;
 		border-radius: 0.7rem;
 
-		@include mixins.medium-screen{
+		@include mixins.landscape{
 			border-radius: unset;
 		}
 	}
@@ -812,7 +819,7 @@ a{
 		left: 17%;
 		top: 0.2rem;
 
-		@include mixins.medium-screen{
+		@include mixins.landscape{
 			width: 50%;
 			height: 150%;
 			top: -20%;

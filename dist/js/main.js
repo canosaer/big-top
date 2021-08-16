@@ -1,4 +1,2 @@
-"use strict";
-
-console.log("Hello World from main.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");
+class HeroTextFixer{constructor(){this.heroText=document.querySelector(".about-page .hero__text"),this.setup()}setup=()=>{window.onresize=this.fixHeroText};fixHeroText=()=>{if(window.innerWidth>=768&&window.innerWidth<1024){let e=window.innerWidth/650;this.heroText.style.lineHeight=e}}}new HeroTextFixer;
 //# sourceMappingURL=main.js.map
