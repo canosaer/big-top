@@ -1117,8 +1117,36 @@ a {
     margin: 0 7.1% 2rem;
     -ms-grid-columns: minmax(0, 0.75fr) minmax(0, 1fr);
     grid-template-columns: minmax(0, 0.75fr) minmax(0, 1fr);
+    -ms-grid-rows: auto -webkit-max-content auto;
+    -ms-grid-rows: auto max-content auto;
+    grid-template-rows: auto -webkit-max-content auto;
+    grid-template-rows: auto max-content auto;
     padding: 0;
     border-radius: 0.7rem;
+  }
+  .code > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .code > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .code > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .code > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .code > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .code > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
   }
 }
 .code__heading {
@@ -1128,6 +1156,12 @@ a {
   z-index: 2;
   color: #d30000;
 }
+@media (min-width: 768px) {
+  .code__heading {
+    margin: 1rem 15%;
+    align-self: flex-end;
+  }
+}
 .code__image-slot {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
@@ -1135,6 +1169,27 @@ a {
   height: 0;
   position: relative;
   padding-bottom: 76%;
+}
+@media (min-width: 768px) {
+  .code__image-slot {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+    padding-bottom: 227.5%;
+  }
+}
+@media (min-width: 1024px) {
+  .code__image-slot {
+    padding-bottom: 137%;
+  }
+}
+@media (min-width: 1200px) {
+  .code__image-slot {
+    padding-bottom: 94%;
+  }
 }
 .code__image {
   position: absolute;
@@ -1148,10 +1203,23 @@ a {
      object-position: center;
   border-radius: 0.7rem;
 }
+@media (min-width: 768px) {
+  .code__image {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -o-object-position: left;
+       object-position: left;
+  }
+}
 .code__text {
   line-height: 1.5;
   margin-bottom: 1.75rem;
   z-index: 2;
+}
+@media (min-width: 768px) {
+  .code__text {
+    margin: 1rem 15%;
+  }
 }
 
 .locations {

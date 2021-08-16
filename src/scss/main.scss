@@ -841,6 +841,7 @@ a{
 	@include mixins.landscape{
 		margin: 0 7.1% 2rem;
 		grid-template-columns: minmax(0, 0.75fr) minmax(0, 1fr);
+		grid-template-rows: auto max-content auto;
 		padding: 0;
 		border-radius: 0.7rem;
 	}
@@ -848,22 +849,51 @@ a{
 	&__heading{
 		@include mixins.heading-format;
 		color: variables.$light-red;
+
+		@include mixins.landscape{
+			margin: 1rem 15%;
+			align-self: flex-end;
+		}
 	}
 
 	&__image-slot{
 		grid-row: 4/5;
 		@include mixins.image-slot;
 		padding-bottom: 76%;
+
+		@include mixins.landscape{
+			grid-column: 1/2;
+			grid-row: 1/4;
+			padding-bottom: 227.5%;
+		}
+
+		@include mixins.medium-screen{
+			padding-bottom:137%;
+		}
+
+		@include mixins.wide-screen{
+			padding-bottom:94%;
+		}
 	}
 
 	&__image{
 		@include mixins.cover-parent;
 		@include mixins.default-img;
 		border-radius: 0.7rem;
+
+		@include mixins.landscape{
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			object-position: left;
+		}
 	}
 
 	&__text{
 		@include mixins.text-format;
+
+		@include mixins.landscape{
+			margin: 1rem 15%;
+		}
 	}
 }
 
