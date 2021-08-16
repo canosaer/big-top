@@ -754,7 +754,7 @@ a{
 
 	@include mixins.landscape{
 		margin: unset;
-		margin: 5rem 7.1% 7rem;
+		margin: 4rem 7.1% 9rem;
 		border-radius: unset;
 		height: unset;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 0.75fr);
@@ -889,6 +889,10 @@ a{
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 			object-position: left;
+		}
+
+		@include mixins.wide-screen{
+			object-position: center;
 		}
 	}
 

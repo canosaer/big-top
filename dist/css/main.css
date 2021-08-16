@@ -988,7 +988,7 @@ a {
 @media (min-width: 768px) {
   .about-page .hero {
     margin: unset;
-    margin: 5rem 7.1% 7rem;
+    margin: 4rem 7.1% 9rem;
     border-radius: unset;
     height: unset;
     -ms-grid-columns: minmax(0, 1fr) minmax(0, 0.75fr);
@@ -1214,6 +1214,12 @@ a {
     border-bottom-right-radius: 0;
     -o-object-position: left;
        object-position: left;
+  }
+}
+@media (min-width: 1200px) {
+  .code__image {
+    -o-object-position: center;
+       object-position: center;
   }
 }
 .code__text {
