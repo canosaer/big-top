@@ -759,12 +759,8 @@ a{
 		height: unset;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 0.75fr);
 		padding: 0;
-		grid-template-rows: 22% 0.2rem;
-		border-radius: 0.7rem;
-	}
-
-	@include mixins.medium-screen{
 		grid-template-rows: 23.75% 0.5rem;
+		border-radius: 0.7rem;
 	}
 
 	&__heading{
@@ -772,26 +768,15 @@ a{
 			margin: unset;
 			margin-left: 15%;
 			align-self: flex-end;
-			font-size: 2rem;
-		}
-
-		@include mixins.medium-screen{
-			font-size: 2.5rem;
 		}
 	}
 
 	&__text{
 		@include mixins.landscape{
-			margin: 0 3rem 0 15%;
+			margin: 0 4rem 0 15%;
 			grid-column: 1/2;
 			place-self: top center;
 			grid-row: 3/4;
-			line-height: 1.1;
-		}
-
-		@include mixins.medium-screen{
-			margin: 0 4rem 0 15%;
-			line-height: 1.5rem;
 		}
 	}
 
@@ -802,6 +787,11 @@ a{
 		@include mixins.landscape{
 			grid-row: 1/4;
 			grid-column: 2/3;
+			padding-bottom: 130%;
+		}
+
+		@include mixins.medium-screen{
+			padding-bottom:76%;
 		}
 	}
 
@@ -820,10 +810,16 @@ a{
 		top: 0.2rem;
 
 		@include mixins.landscape{
+			width: 55%;
+			height: 100%;
+			top: 0;
+			left: 28.5%;
+		}
+
+		@include mixins.medium-screen{
 			width: 50%;
 			height: 150%;
 			top: -20%;
-			left: 28.5%;
 		}
 
 		@include mixins.wide-screen{
@@ -852,44 +848,22 @@ a{
 	&__heading{
 		@include mixins.heading-format;
 		color: variables.$light-red;
-
-		@include mixins.landscape{
-			margin: 5% 15% 0;
-		}
-		
 	}
 
 	&__image-slot{
 		grid-row: 4/5;
 		@include mixins.image-slot;
 		padding-bottom: 76%;
-
-		@include mixins.landscape{
-			grid-column: 1/2;
-			grid-row: 1/4;
-			padding-bottom: 161.8%;
-		}
 	}
 
 	&__image{
 		@include mixins.cover-parent;
 		@include mixins.default-img;
 		border-radius: 0.7rem;
-
-		@include mixins.landscape{
-			border-radius: unset;
-			border-top-left-radius:0.7rem;
-			border-bottom-left-radius: 0.7rem;
-			object-position: left;
-		}
 	}
 
 	&__text{
 		@include mixins.text-format;
-
-		@include mixins.landscape{
-			margin: 5% 15% 0;
-		}
 	}
 }
 
