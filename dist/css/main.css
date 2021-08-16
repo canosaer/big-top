@@ -988,7 +988,7 @@ a {
 @media (min-width: 768px) {
   .about-page .hero {
     margin: unset;
-    margin: 0 7.1% 2rem;
+    margin: 5rem 7.1% 7rem;
     border-radius: unset;
     height: unset;
     -ms-grid-columns: minmax(0, 1fr) minmax(0, 0.75fr);
@@ -1189,6 +1189,11 @@ a {
 @media (min-width: 1200px) {
   .code__image-slot {
     padding-bottom: 94%;
+  }
+}
+@media (min-width: 1440px) {
+  .code__image-slot {
+    padding-bottom: 76%;
   }
 }
 .code__image {
