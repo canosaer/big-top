@@ -412,6 +412,10 @@ a {
     margin-bottom: auto;
   }
 }
+.hero__button:hover {
+  -webkit-filter: brightness(0.85);
+          filter: brightness(0.85);
+}
 .hero__circle {
   width: 15rem;
   height: 15rem;
@@ -844,6 +848,10 @@ a {
     margin-left: 15%;
   }
 }
+.contact__button:hover {
+  -webkit-filter: brightness(0.85);
+          filter: brightness(0.85);
+}
 
 .outro {
   background: #1d1c1e;
@@ -962,6 +970,12 @@ a {
   opacity: 0.5;
   margin-bottom: 0.75rem;
 }
+.outro__email {
+  color: #f1f3f5;
+}
+.outro__email:hover {
+  text-decoration: underline;
+}
 
 .footer-nav {
   margin: 0 auto;
@@ -1023,6 +1037,9 @@ a {
     margin-top: 16.5rem;
   }
 }
+.footer-nav__link:hover {
+  color: #d30000;
+}
 
 .social-media {
   display: flex;
@@ -1049,6 +1066,9 @@ a {
   opacity: 0.6;
   font-size: 1.6rem;
   margin-right: 1rem;
+}
+.social-media__icon:hover {
+  opacity: 0.9;
 }
 
 .fa-instagram {

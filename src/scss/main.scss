@@ -251,6 +251,10 @@ a{
 			justify-self: left;
 			margin-bottom: auto;
 		}
+
+		&:hover{
+			filter: brightness(0.85);
+		}
 	}
 
 	&__circle{
@@ -626,6 +630,10 @@ a{
 			place-self: center center;
 			margin-left:15%;
 		}
+
+		&:hover{
+			filter: brightness(0.85);
+		}
 	}
 }
 
@@ -721,6 +729,13 @@ a{
 		margin-bottom: 0.75rem;
 	}
 
+	&__email{
+		color: variables.$light-gray;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
 	
 }
 
@@ -769,6 +784,10 @@ a{
 		@include mixins.medium-screen{
 			margin-top: 16.5rem;
 		}
+
+		&:hover{
+			color: variables.$light-red;
+		}
 	}
 }
 
@@ -791,6 +810,10 @@ a{
 		opacity: 0.6;
 		font-size: 1.6rem;
 		margin-right: 1rem;
+
+		&:hover{
+			opacity: 0.9;
+		}
 	}
 }
 
